@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 import files.payload;
 import io.restassured.path.json.JsonPath;
 
-public class SumValidation {
+public class SumValidation_3 {
 
 	@Test
 	public void sumOfCourses()

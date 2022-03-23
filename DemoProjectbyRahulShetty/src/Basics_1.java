@@ -9,7 +9,7 @@ import org.testng.Assert;
 import files.ReUsableMethods;
 import files.payload;
 
-public class Basics {
+public class Basics_1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -29,7 +29,7 @@ public class Basics {
 		System.out.println(response);
 		
 		JsonPath js=new JsonPath(response); //for parsing Json
-		String placeId=js.getString("place_id");
+		String placeId=js.getString("place_id"); 
 		
 		System.out.println(placeId);
 		
