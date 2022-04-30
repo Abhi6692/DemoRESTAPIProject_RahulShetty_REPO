@@ -49,9 +49,10 @@ public static void main(String[] args) {
 	
 	ResponseSpecification resSpec = new ResponseSpecBuilder().expectStatusCode(200).build();
 	
-	String response=given().log().all().spec(reqSpec).body(ap).
-	when()
-		.post("maps/api/place/add/json")
+	RequestSpecification res = given().log().all().spec(reqSpec).body(ap);
+	
+	
+	String response=res.when().post("maps/api/place/add/json")
 	.then()
 		.assertThat().spec(resSpec).extract().response().asString();
 	
